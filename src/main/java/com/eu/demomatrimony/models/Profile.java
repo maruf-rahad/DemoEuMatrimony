@@ -1,36 +1,20 @@
 package com.eu.demomatrimony.models;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
 import java.util.Date;
 
+@Entity
 
 public class Profile {
-    private int id;
-    private String name;
-    private int age;
-    private String gender;
-    private Date birthday;
-    private String address;
-    private int height;
-    private int weight;
-    private String email;
-    private String phone;
-    private String education;
-    private String ethnicity;
-    private String maritalStatus;
-    private String nationality;
-    private String secondNationality;
-    private String motherName;
-    private String fatherName;
-    private String fatherOccupation;
-    private String motherOccupation;
-    private String numberOfSiblings;
-
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -42,11 +26,11 @@ public class Profile {
         this.name = name;
     }
 
-    public int getAge() {
+    public Long getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(Long age) {
         this.age = age;
     }
 
@@ -74,19 +58,19 @@ public class Profile {
         this.address = address;
     }
 
-    public int getHeight() {
+    public Double getHeight() {
         return height;
     }
 
-    public void setHeight(int height) {
+    public void setHeight(Double height) {
         this.height = height;
     }
 
-    public int getWeight() {
+    public Double getWeight() {
         return weight;
     }
 
-    public void setWeight(int weight) {
+    public void setWeight(Double weight) {
         this.weight = weight;
     }
 
@@ -185,6 +169,29 @@ public class Profile {
     public void setNumberOfSiblings(String numberOfSiblings) {
         this.numberOfSiblings = numberOfSiblings;
     }
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String name;
+    private Long age;
+    private String gender;
+    private Date birthday;
+    private String address;
+    private Double height;
+    private Double weight;
+    private String email;
+    private String phone;
+    private String education;
+    private String ethnicity;
+    private String maritalStatus;
+    private String nationality;
+    private String secondNationality;
+    private String motherName;
+    private String fatherName;
+    private String fatherOccupation;
+    private String motherOccupation;
+    private String numberOfSiblings;
 
     @Override
     public String toString() {
