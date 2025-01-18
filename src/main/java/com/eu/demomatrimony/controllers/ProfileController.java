@@ -2,6 +2,7 @@ package com.eu.demomatrimony.controllers;
 
 import com.eu.demomatrimony.interfaces.ProfileService;
 import com.eu.demomatrimony.models.Profile;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -9,6 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
+@Tag(name = "Profile Apis", description = "create, get, update, delete")
 public class ProfileController {
 
     private final ProfileService profileService;
