@@ -5,6 +5,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
@@ -16,7 +17,7 @@ public class Profile extends BaseModel{
     private String name;
     private Long age;
     private String gender;
-    private Date birthday;
+    private LocalDate birthday;
     private String address;
     private Double height;
     private Double weight;
@@ -65,11 +66,11 @@ public class Profile extends BaseModel{
         this.gender = gender;
     }
 
-    public Date getBirthday() {
+    public LocalDate getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(Date birthday) {
+    public void setBirthday(LocalDate birthday) {
         this.birthday = birthday;
     }
 
