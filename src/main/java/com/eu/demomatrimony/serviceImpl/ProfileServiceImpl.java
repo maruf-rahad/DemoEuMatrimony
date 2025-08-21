@@ -30,6 +30,7 @@ public class ProfileServiceImpl implements ProfileService {
 
     @Override
     public Profile createProfile(Profile profile) {
+        System.out.println(profile);
         profileRepository.save(profile);
         return profile;
     }

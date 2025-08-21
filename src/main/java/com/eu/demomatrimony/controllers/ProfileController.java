@@ -3,6 +3,7 @@ package com.eu.demomatrimony.controllers;
 import com.eu.demomatrimony.interfaces.ProfileService;
 import com.eu.demomatrimony.models.Profile;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,9 +16,10 @@ public class ProfileController {
 
     private final ProfileService profileService;
 
-    ProfileController(ProfileService profileService) {
+    public ProfileController(ProfileService profileService) {
         this.profileService = profileService;
     }
+
 
     @GetMapping("/profile")
     private List<Profile> getAllProfiles() {
@@ -34,6 +36,7 @@ public class ProfileController {
 
     @PostMapping("/profile")
     private Profile addProfile(@RequestBody Profile profile) {
+        System.out.println(profile);
         return profileService.createProfile(profile);
     }
 
