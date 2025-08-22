@@ -7,7 +7,7 @@ public class ProfileDto {
     private String name;
     private Long age;
     private String gender;
-    private Date birthday;
+    private String birthday;
     private String address;
     private Double height;
     private Double weight;
